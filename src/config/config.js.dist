@@ -1,0 +1,4 @@
+export const NASA = {
+    url: 'https://api.nasa.gov',
+    apiKey: ''
+}
