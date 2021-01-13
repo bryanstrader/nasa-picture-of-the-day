@@ -10,6 +10,12 @@ This is a class based react component that uses redux and redux saga to interact
 
 Sign-up here: https://api.nasa.gov
 
+## Setup
+
+1. use npm to install dependencies in package.json
+2. rename config.js.dist to config.js and add your api key
+3. npm run start
+
 
 ## Author
 
