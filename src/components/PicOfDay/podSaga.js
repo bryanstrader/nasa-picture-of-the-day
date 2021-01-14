@@ -1,20 +1,17 @@
-import { all, put, takeLatest } from 'redux-saga/effects';
+import { all, put, takeLatest, call } from 'redux-saga/effects';
 import { TYPES } from './podActions';
-import { NASA } from '../../config/config';
+import { fetchPod } from '../../api/podApi';
 
 export function* getPod() {
 	try {
-		const { url, apiKey } = NASA;
-		let picDate = new Date();
-		picDate = `${picDate.getFullYear()}-${picDate.getMonth()+1}-${picDate.getDate()}`;
-		const response = yield fetch(`${url}/planetary/apod?api_key=${apiKey}&date=${picDate}`);
+		const response = yield call(fetchPod);
 		if (response.status === 200){
 			const data = yield response.json();
 			yield put({
 				type: TYPES.GET_POD_SUCCESS,
 				payload: data
 			});
-		}else{
+		} else {
 			const { msg } = yield response.json();
 			throw msg;
 		}
