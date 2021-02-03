@@ -8,5 +8,5 @@ const getPictureOfDay = () => ({ type: TYPES.GET_POD });
 
 export {
     TYPES,
-    getPictureOfDay
+    getPictureOfDay,
 };

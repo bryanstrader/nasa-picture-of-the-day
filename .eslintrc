@@ -1,6 +1,19 @@
 {
-    "extends": "react-app",
+    "extends": "airbnb",
     "rules":{
-        "quotes": [1, "single", { "avoidEscape": true }]
-    }
+        // Indent with 4 spaces
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+
+        // Indent JSX with 4 spaces
+        "react/jsx-indent": ["error", 4],
+
+        // Indent props with 4 spaces
+        "react/jsx-indent-props": ["error", 4],
+
+        "jsx-a11y/label-has-associated-control": "off"
+    },
+    "env": {
+        "browser": true
+    },
+    "parser": "babel-eslint"
 }

@@ -10,19 +10,17 @@ const mapStateToProps = (state) => {
     return {
         podDetails,
         error,
-        isLoading
+        isLoading,
     };
 };
 
-const mapDispatchToProps = dispatch => {
-    return {
-        onGetPictureOfDay: () => dispatch(getPictureOfDay()),
-    }
-};
+const mapDispatchToProps = (dispatch) => ({
+    onGetPictureOfDay: () => dispatch(getPictureOfDay()),
+});
 
 export default compose(
     connect(
         mapStateToProps,
-        mapDispatchToProps
-    )
+        mapDispatchToProps,
+    ),
 )(PictureOfDay);
