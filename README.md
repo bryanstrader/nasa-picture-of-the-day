@@ -15,7 +15,11 @@ Sign-up here: https://api.nasa.gov
 1. use npm to install dependencies in package.json
 2. rename config.js.dist to config.js and add your api key
 3. npm run start
+4. npm run test to run tests
 
+## Styles
+
+Uses AirBNB style guid (https://github.com/airbnb/javascript)
 
 ## Author
 
